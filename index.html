@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+            }
+            .sectionSize {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
+            }
+
+            @media (min-width: 768px) {
+                .sectionSize {
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .sectionSize {
+                    padding-left: 12rem;
+                    padding-right: 12rem;
+                }
+            }
+
+            .secondaryTitle {
+                background-position: left bottom;
+                background-repeat: no-repeat;
+                line-height: 2.25rem;
+                margin-bottom: 2rem;
+                padding-left: 4rem;
+                padding-right: 4rem;
+                padding-bottom: 2rem;
+            }
+        </style>
+        <script src="./assets/script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+            Nip navbar section
+         -->
+        <nav
+            class="fixed flex justify-between items-center py-3 text-blue-600 shadow w-full lg:px-48 md:px-12 px-4 content-center bg-white z-10"
+        >
+            <div class="flex items-center">
+                <img src="./assets/images/logo.jpeg" alt="Logo" class="h-12" />
+            </div>
+            <button
+                class="h-8 px-4 hidden md:block text-sm text-white rounded-3xl"
+                style="background-color: #2563eb"
+            >
+                Explore
+            </button>
+            <div id="showMenu" class="md:hidden">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: #000000"
+                >
+                    <path
+                        d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
+                    ></path>
+                </svg>
+            </div>
+        </nav>
+        <div
+            id="mobileNav"
+            class="hidden px-4 py-6 fixed top-0 left-0 h-full w-full bg-gray-100 z-20 animate-fade-in-down"
+        >
+            <div class="flex hideMenu justify-end">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 50 50"
+                    style="fill: #000000"
+                >
+                    <path
+                        d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+                    ></path>
+                </svg>
+            </div>
+            <ul class="flex flex-col mx-8 my-2 items-center text-3xl">
+                <li class="my-6">
+                    <button
+                        class="h-8 px-4 text-sm text-white rounded-3xl"
+                        style="background-color: #2563eb"
+                    >
+                        Explore
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- 
+            BANNER SECTION
+         -->
+        <section
+            class="pt-24 md:mt-0 h-screen flex items-center justify-center text-center lg:px-48 md:px-12 px-4"
+            style="background-color: #2563eb"
+        >
+            <div class="md:flex-1 md:mr-10">
+                <h1 class="text-white text-3xl md:text-5xl font-bold mb-7">
+                    Welcome to NIPE Site
+                </h1>
+                <p class="mt-0 text-sm text-white font-normal mb-7">
+                    Contact for more information: info@hshshdas.com
+                </p>
+                <div class="mt-12">
+                    <a href="/app">
+                        <button
+                            class="px-6 py-2 border-2 text-sm !border-white text-white border-solid rounded-lg"
+                        >
+                            Explore
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- How it works -->
+        <section class="bg-black text-white sectionSize">
+            <div>
+                <h2 class="secondaryTitle bg-underline2 bg-100%">
+                    How it works
+                </h2>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="flex-1 mx-8 flex flex-col items-center my-4">
+                    <div
+                        class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3"
+                    >
+                        1
+                    </div>
+                    <h3 class="font-medium text-xl mb-2">Signup</h3>
+                    <p class="text-center font-montserrat">
+                        Click on the Signup Button
+                    </p>
+                </div>
+                <div class="flex-1 mx-8 flex flex-col items-center my-4">
+                    <div
+                        class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3"
+                    >
+                        2
+                    </div>
+                    <h3 class="font-medium text-xl mb-2">Details</h3>
+                    <p class="text-center font-montserrat">
+                        Select your department
+                    </p>
+                </div>
+                <div class="flex-1 mx-8 flex flex-col items-center my-4">
+                    <div
+                        class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3"
+                    >
+                        3
+                    </div>
+                    <h3 class="font-medium text-xl mb-2">Explore</h3>
+                    <p class="text-center font-montserrat">
+                        Browse through the series of functionalities the app
+                        gives
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Features -->
+        <section id="features" class="sectionSize bg-white">
+            <div class="flex items-start text-center">
+                <img
+                    src="../../assets/logos/Heart.svg"
+                    alt=""
+                    class="h-7 mr-4"
+                />
+                <div>
+                    <h3 class="font-semibold text-2xl">
+                        Feature #Past Questions
+                    </h3>
+                    <p>IPCON Conference would hold blablah Date blablah</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="sectionSize bg-white py-0">
+            <div>
+                <h2 class="secondaryTitle bg-underline4 mb-0 bg-100%">
+                    To register kindly fill this form
+                </h2>
+            </div>
+            <div class="flex w-full flex-col md:flex-row">
+                <div
+                    class="bg-white w-full md:w-2/3 border !border-gray-4 flex-col md:mx-auto shadow-2xl relative rounded-2xl py-5 px-4 md:px-8"
+                >
+                    <form class="">
+                        <div>
+                            <span
+                                class="uppercase text-sm text-gray-600 font-bold"
+                                >Full Name</span
+                            >
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="text"
+                                [(ngModel)]="fullName"
+                                [ngModelOptions]="{ standalone: true }"
+                                required
+                            />
+                        </div>
+                        <div class="mt-4">
+                            <span
+                                class="uppercase text-sm text-gray-600 font-bold"
+                                >Email</span
+                            >
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="email"
+                                [(ngModel)]="email"
+                                [ngModelOptions]="{ standalone: true }"
+                                required
+                            />
+                        </div>
+                        <div class="mt-4">
+                            <span
+                                class="uppercase text-sm text-gray-600 font-bold"
+                                >Phone number</span
+                            >
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="email"
+                                [(ngModel)]="email"
+                                [ngModelOptions]="{ standalone: true }"
+                                required
+                            />
+                        </div>
+                        <div class="mt-4">
+                            <span
+                                class="uppercase text-sm text-gray-600 font-bold"
+                                >Type</span
+                            >
+                            <select
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                            >
+                                <option>Student</option>
+                                <option>Member</option>
+                                <option>Expert</option>
+                            </select>
+                        </div>
+                        <div class="mt-4">
+                            <button
+                                class="border-2 w-full border-solid border-black rounded-xl text-lg py-3 mt-4"
+                                type="submit"
+                                (click)="sendEmail()"
+                            >
+                                Send a message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ  -->
+        <section
+            id="howitworks"
+            class="sectionSize items-start pt-8 md:pt-36 text-white"
+            style="background-color: #2563eb"
+        >
+            <div>
+                <h2
+                    class="secondaryTitle bg-highlight3 p-10 mb-0 bg-center bg-100%"
+                >
+                    FAQ
+                </h2>
+            </div>
+
+            <div toggleElement class="w-full py-4">
+                <div class="flex justify-between items-center">
+                    <div question class="font-medium mr-auto">
+                        How can i use ?
+                    </div>
+                    <img
+                        src="./assets/images/right.svg"
+                        alt=""
+                        class="transform transition-transform"
+                    />
+                </div>
+                <div answer class="py-4 hidden" style="font-size: 12px">
+                    You can do that by contacting support.
+                </div>
+            </div>
+            <hr class="w-full bg-white" />
+
+            <div toggleElement class="w-full py-4">
+                <div class="flex justify-between items-center">
+                    <div question class="font-medium mr-auto">
+                        How can i become a mentor?
+                    </div>
+                    <img
+                        src="./assets/images/right.svg"
+                        alt=""
+                        class="transform transition-transform"
+                    />
+                </div>
+                <div answer class="py-4 hidden" style="font-size: 12px">
+                    You can do that by contacting support.
+                </div>
+            </div>
+            <hr class="w-full bg-white" />
+
+            <div toggleElement class="w-full py-4">
+                <div class="flex justify-between items-center">
+                    <div question class="font-medium mr-auto">kldlkdd?</div>
+                    <img
+                        src="./assets/images/right.svg"
+                        alt=""
+                        class="transform transition-transform"
+                    />
+                </div>
+                <div answer class="py-4 hidden" style="font-size: 12px">
+                    You can do that by contacting support.
+                </div>
+            </div>
+            <hr class="w-full bg-white" />
+        </section>
+        <!-- Footer -->
+        <section class="sectionSize" style="background-color: #2563eb">
+            <div class="mb-4">
+                <img src="./assets/images/logo.jpeg" alt="Logo" class="h-40" />
+            </div>
+            <div
+                class="w-full flex m-auto pt-3 border-t border-white text-white text-sm flex-col md:flex-row"
+            >
+                <div class="mt-2">© Copyright 2022. All Rights Reserved.</div>
+            </div>
+        </section>
+    </body>
+</html>
