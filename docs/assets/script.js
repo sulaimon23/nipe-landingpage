@@ -50,14 +50,15 @@ function submitFormData(event) {
     `;
     Email.send({
         Host: "smtp.elasticemail.com",
-        Username: "tsulaimon96@gmail.com",
-        Password: "6F72DC3A7B16B959643171602510D0073914",
-        To: 'hi@support.wefella.com',
-        From: "tsulaimon96@gmail.com",
+        Username: "ipecon2022@nipe.org.ng",
+        Password: "4DDC4E3C27430B07FF45AFD54C036BF6312F",
+        To: 'info@nipe.org.ng',
+        From: "tsulaimon21@yahoo.com",
         Subject: data.fullName + " " + "made a request",
         Body: bodyString,
     }).then(
         message => {
+            console.log(message)
             if (message == 'OK') {
                 document.querySelector("#alert").classList.remove("hidden")
                 setTimeout(() => {
